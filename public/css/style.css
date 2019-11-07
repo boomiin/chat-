@@ -1,0 +1,9 @@
+body{
+    background: url('canyon.jpg') center center/cover no-repeat fixed;
+    font-family: sans-serif;
+    
+}
+
+#font{
+    font-size: 8vmin !important;
+}
