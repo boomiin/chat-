@@ -1,3 +1,12 @@
 body{
     background: url("man.jpg") center center/cover no-repeat fixed;
+    height: 100%;
+}
+
+#sent-msg{
+    height: 100%;
+}
+.discuss{
+    height: 90vh;
+    overflow: scroll;
 }

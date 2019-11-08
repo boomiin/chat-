@@ -1,7 +1,7 @@
 body{
     background: url('canyon.jpg') center center/cover no-repeat fixed;
     font-family: sans-serif;
-    
+    height: 100%;
 }
 
 #font{

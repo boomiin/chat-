@@ -1,7 +1,10 @@
-const express = require("express");
+const express = require("express")
 const app = express();
+const server = require('http').Server(app);
 const ejs = require('ejs');
-const io = require('socket.io');
+const io = require('socket.io')(server);
+
+server.listen(3000);
 
 app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');
@@ -11,7 +14,13 @@ app.get("/", (req, res) => {
 });
 
 app.get("/chatroom", (req, res) => {
-    res.render("chatroom.ejs");
+    res.render("chatroom.ejs");   
 });
 
-app.listen(3000);
+io.sockets.on('connection', socket => {
+    console.log("Connected");
+})
+
+
+
+server.listen(3000);

@@ -17,10 +17,27 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                <div class="card justify-content m-4">
+            <div class="col-md-8">
+                <div class="card justify-content m-4 py-5 discuss">
                     <div class="card-body">
-                        <div class="card-title">Hello</div>
+                        <div id="sent-msg">
+                            <h1>Salut</h1>
+                            <h1>Salut</h1>
+                            <h1>Salut</h1>
+                            <h1>Salut</h1>                            
+                        </div>
+                        
+                        <form action="" method="POST" id="poster" >
+                            <div class="row">
+                                <div class="col-lg-10 col-md-8">
+                                    <div class="form-group ">
+                                        <input type="text" name="msg" id="msg" class="form-control">
+                                    </div>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary col-md-4 col-lg-2">Send</button>
+                            </div>                            
+                        </form>
                     </div>
                 </div>
             </div>
@@ -28,5 +45,9 @@
     </div>
 
     <script src="jquery.js"></script>
+    <script src="socket.io/socket.io.js"></script>
+    <script>
+        var socket = io.connect('http://localhost:3000');
+    </script>
 </body>
 </html>
